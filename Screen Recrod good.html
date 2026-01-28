@@ -313,7 +313,7 @@
 
             } catch (err) {
                 console.error(err);
-                alert("เกิดข้อผิดพลาด: " + err.message);
+                alert("An error occurred: " + err.message);
             }
         });
 
@@ -321,17 +321,17 @@
             if (mediaRecorder && mediaRecorder.state !== 'inactive') mediaRecorder.stop();
         });
 
-        btnSave.addEventListener('click', downloadFile);
+        btnSave.addEventListener('click', download File);
 
-        function downloadFile() {
+        function download File() {
             if (!finalBlob) return;
 
             const url = URL.createObjectURL(finalBlob);
             const a = document.createElement("a");
 
-            // ตรวจสอบนามสกุลให้ฉลาดขึ้น
-            let ext = "webm";
-            if (actualMimeType.includes("mp4")) {
+            Check your last name smarter
+            years ext = "webm";
+            if (currentMimeType.includes("mp4")) {
                 ext = "mp4";
             } else if (document.querySelector('input[name="format"]:checked').value === "mp4") {
                 // ถ้า user เลือก MP4 แต่ browser ส่ง webm มา ให้ลองแปะ .mp4 ดู (player ส่วนใหญ่เปิดได้)
